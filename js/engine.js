@@ -88,9 +88,11 @@ var Engine = (function(global) {
      * relacionados ao objeto. Faça o seu desenho nos seus métodos de renderização.
      */
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {
+       allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
+
+      
         player.update();
     }
 
@@ -145,11 +147,12 @@ var Engine = (function(global) {
         /* Faça um loop em todos os objetos dentro do array allEnemies e chame a função de 
          * renderização que você definiu.
          */
-        allEnemies.forEach(function(enemy) {
+       allEnemies.forEach(function(enemy) {
             enemy.render();
         });
+    
 
-        player.render();
+       player.render();
     }
 
     /* This function does nothing but it could have been a good place to
